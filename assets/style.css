@@ -1,0 +1,501 @@
+@font-face {
+    font-family: 'gotham-book';
+    src: url('font/gotham-book-webfont.woff2') format('woff2'),
+         url('font/gotham-book-webfont.woff') format('woff');
+         font-weight: 400;
+}
+@font-face {
+  font-family: 'gotham-medium';
+  src: url('font/gotham-medium-webfont.woff2') format('woff2'),
+       url('font/gotham-medium-webfont.woff') format('woff');
+       font-weight: 600;
+}
+@font-face {
+    font-family: 'gotham-bold';
+    src: url('font/gotham-bold-webfont.woff2') format('woff2'),
+         url('font/gotham-bold-webfont.woff') format('woff');
+         font-weight: 900;
+}
+body {
+  background-color: #fafafa;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-family: "gotham-book";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.91;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7f7f7f;
+  margin-bottom: 50px;
+}
+h1 {
+  font-family: "gotham-medium";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 0.91;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7f7f7f;
+}
+hr.line{
+  border-top: solid #4e4e4e 1px;
+  margin: 5% 20% 5% 20%;
+}
+hr.line:after {
+  content: url( 'sing.png' );
+  zoom:50%;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 30px;
+  background: #fafafa;
+}
+figure{
+  border: #eee solid 1px;
+  margin: 10px;
+  flex-grow: 0;
+  width: 300px;
+  height: 300px;
+  background: #000;
+  overflow: hidden;
+}
+img {
+ margin-left: 50%;
+ transform: translateX(-50%);
+ height: 100%;
+ display: block;
+ transition: transform .2s ease-in-out;
+}
+.container{
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: start;
+}
+.netflix {
+  width: 10%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.narcos {
+  width: 60%;
+  margin-bottom: 1%;
+}
+.instagram {
+  width: 30px;
+}
+.pic {
+	position: relative;
+	display: inline-block;
+}
+.pic:hover .download-btn {
+	display: block;
+}
+figure.pic:hover img{
+    opacity:0.5;
+}
+form{
+      margin-top: 15%;
+}
+input[type='file'] {
+  display: none
+}
+label {
+  font-family: "gotham-book";
+  font-weight: 400;
+  font-size: 12px;
+  border: 1.4px solid #d7171f;
+  border-radius: 50px 0px 0px 50px;
+  padding: 14px 45px;
+  color: #7f7f7f;
+  background: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+}
+.input-file:hover, .input-file:focus {
+  color: #7f7f7f;
+}
+.upload-btn {
+  margin-left: -5px;
+  font-family: "gotham-book";
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 0px 50px 50px 0px;
+  padding: 15px 45px;
+  background: #d7171f;
+  color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+}
+.upload-btn:hover, .upload-btn:focus {
+  background: #7c080d;
+  color: #ffffff;
+}
+.download-btn {
+  z-index: 1;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: none;
+}
+.download-btn a {
+  content: url( 'download.png' );
+	color: #fff;
+  width: 30px;
+  height: 30px;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+input, button, submit {
+  border:none;
+}
+footer {
+  position: relative;
+  height: 3px;
+  background-color: #d7171f;
+  text-align: center;
+}
+.featherlight .featherlight-close-icon {
+  display: none;
+}
+.featherlight .featherlight-content {
+  background: none;
+}
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 18px;
+  }
+  hr.line {
+    margin: 11% 5% 10% 5%;
+  }
+  .instagram {
+    width: 30px;
+    margin-bottom: 2%;
+    margin-top: 10%;
+  }
+  .container{
+    width: 100%;
+  }
+  figure {
+    margin: 3px;
+    width: 90px;
+    height: 90px;
+  }
+  .netflix {
+    width: 25%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+  }
+  .narcos {
+    width: 90%;
+    margin-bottom: 1%;
+  }
+  .download-btn {
+    z-index: 1;
+    padding-bottom: 2px;
+    padding-right: 5px;
+  }
+  .download-btn a {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 369px){
+  h1 {
+      font-size: 20px;
+    }
+    hr.line {
+    margin: 10% 15% 10% 15%;
+  }
+  .container {
+      margin: 0 auto;
+      width: 95%;
+    }
+  figure {
+    margin: 3px;
+    width: 88px;
+    height: 88px;
+  }
+  .netflix {
+    width: 30%;
+    margin-top: 6%;
+    margin-bottom: 1%;
+  }
+  .narcos {
+  width: 90%;
+  margin-top: 6%;
+  margin-bottom: 1%;
+  }
+  .download-btn {
+    padding-bottom: 4px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 15px;
+    height: 15px;
+  }
+  .instagram {
+    width: 30px;
+  }
+}
+@media only screen and (min-width: 370px) and (max-width: 489px){
+  .container {
+      margin: 0 auto;
+      width: 99%;
+    }
+  h1 {
+    font-size: 18px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 10% 2% 10% 2%;
+  }
+  figure {
+    margin: 3px;
+    width: 110px;
+    height: 110px;
+  }
+  .download-btn {
+    padding-bottom: 4px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 15px;
+    height: 15px;
+  }
+  .netflix{
+    width: 30%;
+  }
+  .narcos {
+    width: 80%;
+  }
+  .instagram {
+    width: 30px;
+  }
+}
+@media only screen and (min-width: 490px) and (max-width: 610px) {
+  .container {
+      margin: 0 auto;
+      width: 99%;
+    }
+  h1 {
+    font-size: 30px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 5% 6% 5% 6%;
+  }
+  figure {
+    margin: 3px;
+    width: 170px;
+    height: 170px;
+  }
+  .download-btn {
+    padding-bottom: 4px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 20px;
+    height: 20px;
+  }
+  .instagram {
+    width: 30px;
+  }
+  .netflix{
+    width: 20%;
+  }
+  .narcos {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 611px) and (max-width: 899px) {
+  .container {
+      margin: 0 auto;
+      width: 99%;
+    }
+  h1 {
+    font-size: 30px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 5% 6% 5% 6%;
+  }
+  figure {
+    margin: 3px;
+    width: 210px;
+    height: 210px;
+  }
+  .download-btn {
+    padding-bottom: 4px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 20px;
+    height: 20px;
+  }
+  .instagram {
+    width: 30px;
+  }
+  .netflix{
+    width: 20%;
+  }
+  .narcos {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1023px) {
+  .container {
+      margin: 0 auto;
+      width: 95%;
+    }
+  h1 {
+    font-size: 30px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 5% 3% 5% 3%;
+  }
+  figure {
+    margin: 3px;
+    width: 270px;
+    height: 270px;
+  }
+  .download-btn {
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 30px;
+    height: 30px;
+  }
+  .instagram {
+    width: 30px;
+  }
+  .netflix{
+    width: 15%;
+  }
+  .narcos {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1354px) {
+  .container {
+      margin: 0 auto;
+      width: 95%;
+    }
+  h1 {
+    font-size: 25px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 5% 14% 5% 14%;
+  }
+  figure {
+    margin: 3px;
+    width: 310px;
+    height: 310px;
+  }
+  .download-btn {
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 30px;
+    height: 30px;
+  }
+  .instagram {
+    width: 30px;
+  }
+  .netflix{
+    width: 10%;
+  }
+  .narcos {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1355px) and (max-width: 1439px) {
+  .container {
+      margin: 0 auto;
+      width: 95%;
+    }
+  h1 {
+    font-size: 25px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 5% 10% 5% 10%;
+  }
+  figure {
+    margin: 3px;
+    width: 360px;
+    height: 360px;
+  }
+  .download-btn {
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 30px;
+    height: 30px;
+  }
+  .instagram {
+    width: 30px;
+  }
+  .netflix{
+    width: 10%;
+  }
+  .narcos {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  .container {
+      margin: 0 auto;
+      width: 70%;
+    }
+  h1 {
+    font-size: 30px;
+    margin:2% 12% 0% 12%;
+  }
+  hr.line {
+    margin: 5% 10% 5% 10%;
+  }
+  figure {
+    margin: 3px;
+    width: 360px;
+    height: 360px;
+  }
+  .download-btn {
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+  .download-btn a{
+    width: 30px;
+    height: 30px;
+  }
+  .instagram {
+    width: 30px;
+  }
+  .netflix{
+    width: 10%;
+  }
+  .narcos {
+    width: 50%;
+  }
+}
